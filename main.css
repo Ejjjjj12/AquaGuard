@@ -276,12 +276,12 @@ body {
   font-size: 0.85rem;
   color: #3d5a7a;
 }
-/* ── BRAND LOGO ── */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
 .brand-icon {
   font-size: 1.4rem;
