@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AquaGuard – Dashboard</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="brand"> AquaGuard Systems</div>
+    <div class="nav-right">
+      <span class="live-badge">● LIVE</span>
+      <span id="clock">--:--:-- --</span>
+    </div>
+  </nav>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <a href="AquaGuard.html" class="nav-link active"> Dashboard</a>
+      <a href="History.html" class="nav-link"> History</a>
+      <a href="Alerts.html" class="nav-link"> Alerts</a>
+      <a href="Map.html" class="nav-link"> Map</a>
+      <a href="Settings.html" class="nav-link"> Settings</a>
+    </aside>
+
+    <main class="main">
+
+      <div class="left-col">
+
+        <div class="panel chart-panel">
+          <p class="panel-title">WATER LEVEL TREND</p>
+          <canvas id="chart"></canvas>
+        </div>
+
+        <div class="panel info-panel">
+          <p class="panel-title">STATION INFO</p>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-key">Location</span>
+              <span class="info-val">Malolos River Station</span>
+              <iframe
+                src="https://www.google.com/maps?q=14.8527,120.8110&z=14&output=embed"
+                width="100%"
+                height="180"
+                style="border:0; border-radius:8px; margin-top:8px;"
+                allowfullscreen=""
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="info-item">
+              <span class="info-key">Date</span>
+              <span class="info-val" id="infoDate">—</span>
+            </div>
+            <div class="info-item">
+              <span class="info-key">Time</span>
+              <span class="info-val" id="infoTime">—</span>
+            </div>
+            <div class="info-item">
+              <span class="info-key">Temperature</span>
+              <span class="info-val">28.4 °C</span>
+            </div>
+            <div class="info-item">
+              <span class="info-key">Last Update</span>
+              <span class="info-val" id="lastUpdate">—</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="right-col">
+  <div class="card">
+    <p class="card-label">WATER LEVEL</p>
+    <h2 class="card-value blue" id="waterLevel">2.35 m</h2>
+    <p class="card-sub blue">MEDIUM</p>
+  </div>
+  <div class="card">
+    <p class="card-label">RISK LEVEL</p>
+    <h2 class="card-value gold">MODERATE</h2>
+    <p class="card-sub gold">RISK</p>
+  </div>
+  <div class="card">
+    <p class="card-label">STATUS</p>
+    <h2 class="card-value green">NORMAL</h2>
+  </div>
+
+  <div class="panel alert-panel">
+    <p class="panel-title">RECENT ALERTS</p>
+    <ul class="alert-list">
+      <li class="alert-item">
+        <span class="dot gold"></span>
+        <div>
+          <strong>Level Rising</strong> — rose 0.08 m in past hour
+          <span class="alert-time">10:30 AM</span>
+        </div>
+      </li>
+      <li class="alert-item">
+        <span class="dot green"></span>
+        <div>
+          <strong>System Check</strong> — all sensors operational
+          <span class="alert-time">09:00 AM</span>
+        </div>
+      </li>
+      <li class="alert-item">
+        <span class="dot green"></span>
+        <div>
+          <strong>Normal Flow</strong> — levels within safe range
+          <span class="alert-time">06:00 AM</span>
+        </div>
+      </li>
+      <li class="alert-item">
+        <span class="dot red"></span>
+        <div>
+          <strong>High Alert</strong> — peak at 3.10 m cleared
+          <span class="alert-time">Yesterday 11 PM</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="panel map-panel">
+    <div class="map-content">
+      <p class="map-pin">📍</p>
+      <p class="map-name">Malolos River Station</p>
+      <p class="map-sub">Malolos, Bulacan, Philippines</p>
+      <p class="map-coords">14.8527° N, 120.8110° E</p>
+    </div>
+  </div>
+
+</div>
+
+    </main>
+  </div>
+
+</body>
+</html>
