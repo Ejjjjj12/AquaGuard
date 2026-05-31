@@ -18,6 +18,7 @@ body {
   justify-content: space-between;
   padding: 0 24px;
   height: 60px;
+  min-height: 60px;
   background-color: #0d1525;
   border-bottom: 1px solid #1c2e48;
 }
@@ -26,7 +27,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  height: 100%;
 }
 
 .nav-right {
@@ -35,6 +35,7 @@ body {
   gap: 16px;
   font-size: 0.8rem;
   color: #5a7a9e;
+  margin-left: auto;
 }
 
 .live-badge {
@@ -292,11 +293,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 1;
+  gap: 3px;
 }
 
 .brand-name {
-  display: block;
   font-size: 1rem;
   font-weight: 900;
   color: #00cfff;
@@ -305,12 +305,10 @@ body {
 }
 
 .brand-sub {
-  display: block;
-  font-size: 0.52rem;
+  font-size: 0.5rem;
   font-weight: 600;
   color: #5a7a9e;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-top: 4px;
   line-height: 1;
 }
