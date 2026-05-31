@@ -17,15 +17,16 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  height: 52px;
+  height: 60px;
   background-color: #0d1525;
   border-bottom: 1px solid #1c2e48;
 }
 
 .brand {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #00cfff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
 }
 
 .nav-right {
@@ -274,4 +275,39 @@ body {
 .empty-sub {
   font-size: 0.85rem;
   color: #3d5a7a;
+}
+/* ── BRAND LOGO ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-name {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #00cfff;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.brand-sub {
+  display: block;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: #5a7a9e;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 3px;
 }
